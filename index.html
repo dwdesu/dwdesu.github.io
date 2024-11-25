@@ -1,43 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
-    <title>Document</title>
+    <title>about the band..</title>
     <style>
-        div{
-            background-color: rgb(240, 214, 236);
-            width:400px;
-            height:100px;
-            border:5px solid #ffbfff;
-            margin: 20px;
-            padding: 10px;
-            /* 주석처리=ctrl+/ */
-        }
-        p{
-        width: 200px;
-        border:10px;
-        text-align: center;
-        }
+    html, body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        height: 100%;
+        margin: 0px;}
+    header{
+        background-color:aliceblue;
+        margin: 10px;
+        padding: 0px;
+    }    
+    nav{
+        width: 100%;
+        background-color: blanchedalmond;
+    }
+    section{
+        margin: 20px;
+    }
+
+    #menubar{
+        background-color:rgba(0, 234, 255, 0.414);
+        padding: 10px;
+    }
+    #menubar ul{
+        margin:0;
+
+    }
+    #menubar ul li{
+       display: inline-block;
+       list-style-type: none;
+       padding: 0px 15px;
+       text-decoration: none;}
+    #menubar ul li a:hover{
+        color:white;
+    }
+
     </style>
+
 </head>
+
 <body>
-    <div>DIV1<br>
-        <h1>마진 테두리 패딩 연습</h1>
-        <!-- 코드주석 처리는= !-- -->
+    <header>
+        <h1> About the BAND,, </h1>
+    </header>
+
+    <nav id="menubar">
+        <ul>
+            <li><a href="#구성">밴드의 구성</a></li>
+            <li><a href=#국내>국내 인디밴드</a></li>
+            <li><a href=#해외>해외 밴드</a></li>
+            <li><a href=#장르>장르</a></li>
+            <li><a href=#추천>곡 추천</a></li>
+        </ul>
+
         
-    </div>
-    <div style="background-color: beige;height:200px;"">DIV2<br>
-        <h1>마진 테두리 패딩 연습</h1>
-        <li>margin : 테두리 바깥쪽 여백</li>
-        <li>padding : 내용과 테두리 사이의 영역</li>
-        <li>border : 테두리 영역</li>
-    </div>
-    <div style="padding:20px; margin:20px; border-style:dashed;">DIV3<br>
-        <h1>마진 테두리 패딩 연습</h1>
-        <li>margin : 테두리 바깥쪽 여백</li>
-        <li>padding : 내용과 테두리 사이의 영역</li>
-        <li>border : 테두리 영역</li>
-    </div>
+    </nav>
+
+    <section>
+        <section>
+            <h4>**이달의 노래</h4>
+            <iframe width="500" height="350" src="https://www.youtube.com/embed/H6GIe4-JHAM"></iframe>
+            
+            <article id="구성">
+            <h2>밴드의 구성</h2>
+            <p>밴드는 보통 보컬, 드럼, 기타, 베이스로 이루어져 있습니다.</p>
+            사진넣으면서설명
+
+            <article id="국내">
+            <h2>국내 인디밴드</h2>
+            <p>'인디 음악'은 보통 1990년대 이후 홍대 앞을 중심지로 하는 록 관련 음악들을 지칭하는 용도로 많이 쓰이고 있다. 
+                장르적으로는 록 음악 중에서도 모던 록이 가장 주류고, 그 외 포크 록이나 사이키델릭 록, 홍대 인디 초창기를 수놓은 조선 펑크 등이 있다. 물론 힙합과 같은 다른 장르의 인디 신 역시 엄연히 존재하나 한국에서는 첫 시작이 이 장르였다보니 보통 '인디'하면 록 음악부터 떠올리는 경우가 많다.<br>
+                -나무위키<br>
+
+                <ul>
+                    <li type="1">1세대</li>
+                    -태동
+                    <ul> <h4>조선 펑크</h4>
+                        <li>크라잉넛</li>
+                        <li>노브레인</li>
+                    </ul>
+                    <ul><h4>모던록</h4>
+                        <li>언니네 이발관</li>
+                        <li>델리스파이스</li>
+                        <li>자우림</li>
+                        <li>체리필터</li>
+                    </ul>
+        
+                    <li type="1">2세대</li>
+                    -화양연화
+                    <ul><h4>2000년대 후반</h4>
+                        <li>서울전자음악단</li>
+                        <li>장기하와 얼굴들</li>
+                        <li>검정치마</li>
+                        <li>국가스텐</li>
+                        <li>브로콜리너마저</li>
+                        <li>쏜애플</li>
+                        <li>9와 숫자들</li>
+                    </ul>
+                    <ul><h4>2010년대</h4>
+                        <li>혁오</li>
+                        <li>잔나비</li>
+                        <li>실리카겔</li>
+                        <li>멜로망스</li>
+                    </ul>
+                    <li type="1">3세대</li>
+                    -코로나를 딛고 재도약
+                    <ul><h4>2020년대</h4>
+                        <li>새소년</li>
+                        <li>터치드</li>
+                        <li>나상현씨밴드</li>
+                        <li>설</li>
+                        <li>라쿠나</li>
+                        <li>웨이브 투 어스</li>
+                        <li>루시</li>
+                        <li>더 폴스</li>
+                        <li>파란노을</li>
+                </ul>
+
+            
+            </p>
+        </article>
+
+    </section>
+
 </body>
 </html>
