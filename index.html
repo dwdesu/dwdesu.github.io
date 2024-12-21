@@ -2,129 +2,250 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>about the band..</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webpage</title>
+
     <style>
-    html, body {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        height: 100%;
-        margin: 0px;}
-    header{
-        background-color:aliceblue;
-        margin: 10px;
-        padding: 0px;
-    }    
-    nav{
-        width: 100%;
-        background-color: blanchedalmond;
-    }
-    section{
-        margin: 20px;
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
     }
 
-    #menubar{
-        background-color:rgba(0, 234, 255, 0.414);
-        padding: 10px;
-    }
-    #menubar ul{
-        margin:0;
-
-    }
-    #menubar ul li{
-       display: inline-block;
-       list-style-type: none;
-       padding: 0px 15px;
-       text-decoration: none;}
-    #menubar ul li a:hover{
-        color:white;
+    header {
+        background-color: #f4f4f4;
+        padding: 20px;
+        text-align: center;
     }
 
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    main section {
+        display: none; /* 기본적으로 모든 섹션 숨김 */
+        padding: 20px;
+    }
+
+    main section.active {
+        display: block; /* 활성화된 섹션만 표시 */
+    }
     </style>
-
 </head>
-
 <body>
     <header>
-        <h1> About the BAND,, </h1>
+        <h1>ABOUT THE BAND..</h1>
+        <nav>
+            <ul>
+                <li><a href="#about" data-target="about">밴드의 구성</a></li>
+                <li><a href="#history" data-target="history">한국 밴드의 역사</a></li>
+                <li><a href="#share" data-target="share">음악의 장</a></li>
+                <li><a href="#recommendation" data-target="recommendation">추천하는 모든것</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav id="menubar">
-        <ul>
-            <li><a href="#구성">밴드의 구성</a></li>
-            <li><a href=#국내>국내 인디밴드</a></li>
-            <li><a href=#해외>해외 밴드</a></li>
-            <li><a href=#장르>장르</a></li>
-            <li><a href=#추천>곡 추천</a></li>
-        </ul>
+    <main>
+        <section id="home" class="active">
+            <h2>환영합니다! 메뉴를 클릭하여 더 많은 정보를 확인하세요.</h2>
+            <h4>**이달의 추천 노래</h4>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/H6GIe4-JHAM"></iframe>
+            <br><br>
+            <h4>해당 곡에 대한 당신의 취향을 알려주세요!</h4>
+            <form>
+                <label>
+                    <input type="radio" name="vote" value="1"> 마음에 들어요
+                    <input type="radio" name="vote" value="1"> 내 취향은 아니에요 
+                    <input type="submit" value="제출">
+                </label>
+            </form>
+        </section>
 
-        
-    </nav>
-
-    <section>
-        <section>
-            <h4>**이달의 노래</h4>
-            <iframe width="500" height="350" src="https://www.youtube.com/embed/H6GIe4-JHAM"></iframe>
-            
-            <article id="구성">
+        <section id="about">
             <h2>밴드의 구성</h2>
-            <p>밴드는 보통 보컬, 드럼, 기타, 베이스로 이루어져 있습니다.</p>
-            사진넣으면서설명
+            <p>밴드는 보통 보컬, 드럼, 기타, 베이스로 이루어져 있습니다. 밴드에 따라 키보드나 신디사이저가 추가되기도 합니다.</p>
+            <button onclick="showAlert('일렉기타입니다.')">
+                <input type="image" src="https://cdn-pro-web-144-135.cdn-nhncommerce.com/wikiwiki1_godomall_com/data/goods/22/05/22/1000003825/1000003825_detail_076.png"
+                width="300" height="300"
+                alt="일렉">
+            </button>
+            <button onclick="showAlert('드럼입니다.')">
+                <input type="image" src="https://m.sire-korea.com/web/product/big/201612/67_shop1_367573.jpg"
+                width="300" height="300" alt="드럼">
+            </button>
+            <br>
+            <button onclick="showAlert('베이스기타입니다.')">
+                <input type="image" src="https://kr.yamaha.com/ko/files/product_thumb_trbx174_6dff40274c8142484c228ca196661d4e.jpg?impolicy=resize&imwid=735&imhei=735"
+                width="300" height="300" alt="베이스">
+            </button>
+            <button onclick="showAlert('키보드입니다.')">
+                <input type="image" src="https://sitem.ssgcdn.com/81/85/68/item/1000535688581_i1_750.jpg"
+                width="300" height="300" alt="키보드">
+            </button>
+        </section>
 
-            <article id="국내">
+        <section id="history">
             <h2>국내 인디밴드</h2>
             <p>'인디 음악'은 보통 1990년대 이후 홍대 앞을 중심지로 하는 록 관련 음악들을 지칭하는 용도로 많이 쓰이고 있다. 
-                장르적으로는 록 음악 중에서도 모던 록이 가장 주류고, 그 외 포크 록이나 사이키델릭 록, 홍대 인디 초창기를 수놓은 조선 펑크 등이 있다. 물론 힙합과 같은 다른 장르의 인디 신 역시 엄연히 존재하나 한국에서는 첫 시작이 이 장르였다보니 보통 '인디'하면 록 음악부터 떠올리는 경우가 많다.<br>
-                -나무위키<br>
-
+                장르적으로는 록 음악 중에서도 모던 록이 가장 주류고, 그 외 포크 록이나 사이키델릭 록, 홍대 인디 초창기를 수놓은 조선 펑크 등이 있다. 
+                물론 힙합과 같은 다른 장르의 인디 신 역시 엄연히 존재하나 한국에서는 첫 시작이 이 장르였다보니 보통 '인디'하면 록 음악부터 떠올리는 경우가 많다.<i> -나무위키</i></p>
+            <ul>
+                <li><h3>1세대</h3></li>
+                <b><i>태동</i></b>
                 <ul>
-                    <li type="1">1세대</li>
-                    -태동
-                    <ul> <h4>조선 펑크</h4>
-                        <li>크라잉넛</li>
-                        <li>노브레인</li>
-                    </ul>
-                    <ul><h4>모던록</h4>
-                        <li>언니네 이발관</li>
-                        <li>델리스파이스</li>
-                        <li>자우림</li>
-                        <li>체리필터</li>
-                    </ul>
-        
-                    <li type="1">2세대</li>
-                    -화양연화
-                    <ul><h4>2000년대 후반</h4>
-                        <li>서울전자음악단</li>
-                        <li>장기하와 얼굴들</li>
-                        <li>검정치마</li>
-                        <li>국가스텐</li>
-                        <li>브로콜리너마저</li>
-                        <li>쏜애플</li>
-                        <li>9와 숫자들</li>
-                    </ul>
-                    <ul><h4>2010년대</h4>
-                        <li>혁오</li>
-                        <li>잔나비</li>
-                        <li>실리카겔</li>
-                        <li>멜로망스</li>
-                    </ul>
-                    <li type="1">3세대</li>
-                    -코로나를 딛고 재도약
-                    <ul><h4>2020년대</h4>
-                        <li>새소년</li>
-                        <li>터치드</li>
-                        <li>나상현씨밴드</li>
-                        <li>설</li>
-                        <li>라쿠나</li>
-                        <li>웨이브 투 어스</li>
-                        <li>루시</li>
-                        <li>더 폴스</li>
-                        <li>파란노을</li>
+                    <h4>조선 펑크</h4>
+                    <li>크라잉넛</li>
+                    <li>노브레인</li>
                 </ul>
+                <ul>
+                    <h4>모던록</h4>
+                    <li>언니네 이발관</li>
+                    <li>델리스파이스</li>
+                    <li>자우림</li>
+                    <li>체리필터</li>
+                </ul>
+                <h4>*주인장의 추천곡:</h4>
+                <a href="https://youtu.be/eJXFJLqqzqY?si=INCH0jCaRoXhBlMX">노브레인-stand up my friend</a><br>
+                <a href="https://youtu.be/qmN2dPKOSdU?si=MH27j6Ty1UHsMtpp">델리스파이스-처음으로 우산을 잃어버렸어요</a><br>
+            </ul>
 
+            <ul>
+                <li><h3>2세대</h3></li>
+                <b><i>화양연화</i></b>
+                <ul>
+                    <h4>2000년대 후반</h4>
+                    <li>서울전자음악단</li>
+                    <li>장기하와 얼굴들</li>
+                    <li>검정치마</li>
+                    <li>국가스텐</li>
+                    <li>브로콜리너마저</li>
+                    <li>쏜애플</li>
+                    <li>9와 숫자들</li>
+                </ul>
+                <ul>
+                    <h4>2010년대</h4>
+                    <li>혁오</li>
+                    <li>잔나비</li>
+                    <li>실리카겔</li>
+                    <li>멜로망스</li>
+                </ul>
+                <h4>*주인장의 추천곡:</h4> <a href="https://youtu.be/WNJyw1eDM-U?si=s0wyN6ieia1Jme9g">9와숫자들-높은 마음</a>
+                <br><a href="https://youtu.be/Ggmi7Suzpls?si=eIQapZHxcnI1QwIm">혁오-surf boy</a>
+                <br>
+            </ul>
+
+            <ul>
+                <li><h3>3세대</h3></li>
+                <b><i>코로나를 딛고 재도약</i></b>
+                <ul>
+                    <h4>2020년대</h4>
+                    <li>새소년</li>
+                    <li>터치드</li>
+                    <li>나상현씨밴드</li>
+                    <li>설</li>
+                    <li>라쿠나</li>
+                    <li>웨이브 투 어스</li>
+                    <li>루시</li>
+                    <li>더 폴스</li>
+                    <li>파란노을</li>
+                </ul>
+                
+                <h4>*주인장의 추천곡:</h4> <a href="https://youtu.be/dQJsUB8iqNE?si=V4p0rlApJ5sNUI96">나상현씨밴드-1+1</a>
+                <br><a href="https://youtu.be/VGpvoCUFcu0?si=iOs8tPjH4Af532qb">wave to earth-사랑으로</a>
+                <br>
+            </ul>
             
-            </p>
-        </article>
+            
+        </section>
 
-    </section>
+        <section id="share">
+            <h2>음악의 장</h2>
+            <strong>여러분의 취향을 공유해주세요!</strong>
+            <form id="musicForm">
+                아티스트명:<input type="text" id="artist" value=""><br>
+                노래명: <input type="text" id="song" value=""><br>
+                추천정도:
+                <input type="range" id="rate" min="0" max="100" list="rateList">
+                <datalist id="rateList">
+                    <option value="10" label="LOW"></option>
+                    <option value="50" label="MEDIUM"></option>
+                    <option value="100" label="HIGH"></option>
+                </datalist><br>
+                <input type="submit" value="제출">
+            </form>
+            <div id="result" class="result"></div>
+        </section>
 
-</body>
-</html>
+        <section id="recommendation">
+            <h2>추천하는 모든것</h2>
+            인스타그램  <a href="https://www.instagram.com/ageofband/">
+                <img src="https://ugc.production.linktr.ee/c2d62897-b9a1-4d12-8420-cf36dbaf44f4_IMG-3624.png?io=true&size=avatar-v3_0"
+                width="100" height="100">
+            </a>
+            <br>
+            유튜브  <a href="https://www.youtube.com/@anonymouscritics">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAAAY1BMVEUAAAD////39/fJycmVlZWurq6enp709PTNzc1fX1/v7+/V1dV8fHy8vLzExMTd3d09PT1mZmYeHh5tbW2Dg4MWFhYqKiokJCTo6OhaWloQEBCnp6dCQkJISEi0tLQ4ODhSUlL1/dvbAAACQklEQVRoge2U246jMAxAbQJpCJBwv7UF/v8rxw6d6Y52Z1bp7MtKPhIi4XJwbAcAQRAEQRAEQRCE/xqtql9mrTHNc7Yq07/qHegoNTTmeUlNoMowylua3SBLX1KXJjMl3DeAQuXKGGWc69MOVuzobqVNB5q+k7wSe8Uh6QwUgMP5cdFVlCMke03nooMMwGC8vSf3CHC9OpZbCra93Utd3lmOC3iAFMsrfQKxjJUXABnFtCJZFGKyGdyqU0Ny32gAj8jyBDFWTqlO0JKhCHKKHw/YsGiCPKGroIOcEhgtNxwZpdS6IMcJKOyiaYdTPvIzk9V82kOFY6gouQulnoNz6MsJ+h2aZQKWW64G1THnglYzxtpbT3ZeueMlvDdERovJuQx8J6UNBh0Gmm9Uf2BNkiS8N+WIlzTV120r7IzcHjhbV8zWekWfCxRx8kl1Wqd9mU/L+T66ZqcE9zy0z+dMuBe5T9P80/seD2p8TpVjGSV5rG+3MZTXHEucG0af5sfS9eSkis2D44xjMQAvpNzCVQ4YHw0Zx3AJC6Y3aaCGihsasYY7LYP3WIUJdec9lCXe3nJsqGHgE/8PoT4G7k7EPdthGsIC+eYaL4fVcrK560i++7PdFu6h7Z49nuFWnL9WfEdfmeIaskNho1VZ5cPMw+YvAZ6Zv4u+Cj/YOLgaP6ACbM/Z6/Lw98OQhT15190A3rdP/A76DBU2/KigPVNkzy3AE9rGyXz8RA7z/jGsu278kes3hn+rEwRBEARBEARBiOEN/5sXiUXzc4EAAAAASUVORK5CYII="
+                width="100" height="100">
+            </a><br>
+        </section>
+    </main>
+
+    <script>
+        // 메뉴바 클릭 이벤트 처리
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault(); // 기본 동작 방지
+
+                // 모든 섹션 숨기기
+                document.querySelectorAll('main section').forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                // 클릭된 메뉴에 해당하는 섹션 표시
+                const targetId = link.getAttribute('data-target');
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            });
+        });
+
+        function showAlert(message) {
+        alert(message);
+    }
+
+    // 폼 제출 시 처리
+    document.getElementById('musicForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // 기본 폼 제출 동작 방지
+
+        // 폼 입력값 가져오기
+        const artist = document.getElementById('artist').value;
+        const song = document.getElementById('song').value;
+        const rate = document.getElementById('rate').value;
+
+        // 결과를 표시할 부분
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = `
+            여러분의 취향이 공유되었습니다. 감사합니다
+            <p><strong>아티스트명:</strong> ${artist}
+            <strong>노래명:</strong> ${song}
+            <strong>추천정도:</strong> ${rate}%</p>
+        `;
+    });
+</script>
